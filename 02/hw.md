@@ -38,6 +38,27 @@ Ansible отличается простотой использования, им
 
 *Приложите вывод команд установленных версий каждой из программ, оформленный в Markdown.*
 
+## Ответ
+```bash
+[root@fedora ~]# vboxmanage --version
+6.1.48r159471
+[root@fedora ~]# vagrant --version
+Vagrant 2.2.19
+[root@fedora Загрузки]# terraform --version
+Terraform v1.5.7
+on linux_386
+[root@fedora ~]# ansible --version
+ansible [core 2.14.11]
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.11/site-packages/ansible
+  ansible collection location = /root/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible
+  python version = 3.11.6 (main, Oct  3 2023, 00:00:00) [GCC 12.3.1 20230508 (Red Hat 12.3.1-1)] (/usr/bin/python3)
+  jinja version = 3.0.3
+  libyaml = True
+```
+
 ## Задача 4 
 
 Воспроизведите практическую часть лекции самостоятельно.
