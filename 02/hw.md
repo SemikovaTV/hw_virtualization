@@ -82,3 +82,14 @@ Error: The requested URL returned error: 404:
 2. Добавьте его в список образов Vagrant: "vagrant box add bento/ubuntu-20.04 <путь к файлу>".
 
 *Приложите скриншоты в качестве решения на эту задачу.*
+![ad](https://github.com/SemikovaTV/hw_virtualization/blob/main/02/%D0%92%D1%8B%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_002.png)
+
+![ad](https://github.com/SemikovaTV/hw_virtualization/blob/main/02/%D0%92%D1%8B%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_004.png)
+
+![ad](https://github.com/SemikovaTV/hw_virtualization/blob/main/02/%D0%92%D1%8B%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_005.png)
+
+![ad](https://github.com/SemikovaTV/hw_virtualization/blob/main/02/%D0%92%D1%8B%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_006.png)
+
+
+
+
