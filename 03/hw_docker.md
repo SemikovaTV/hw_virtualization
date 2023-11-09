@@ -82,17 +82,37 @@ docker run -d -p 8080:80 semikova/nginx:1
 - Добавьте ещё один файл в папку ```/data``` на хостовой машине.
 - Подключитесь во второй контейнер и отобразите листинг и содержание файлов в ```/data``` контейнера.
 
-## Задача 4 (*)
-
-Воспроизведите практическую часть лекции самостоятельно.
-
-Соберите Docker-образ с Ansible, загрузите на Docker Hub и пришлите ссылку вместе с остальными ответами к задачам.
-
-
----
-
-### Как cдавать задание
-
-Выполненное домашнее задание пришлите ссылкой на .md-файл в вашем репозитории.
-
----
+## Ответ
+1. Создаем контейнер centos:
+```bash
+docker run -v /data:/data --name centos_container -t -d centos /bin/bash
+```
+2. Создаем контейнер debian:
+```bash
+docker run -v /data:/data --name debian_container -t -d debian /bin/bash
+```
+3. Смотрим список контейнеров: 
+```bash
+[root@fedora containers_hw]# docker container ps
+CONTAINER ID   IMAGE              COMMAND                  CREATED              STATUS                  NAMES
+5f12021e423b   debian             "/bin/bash"              About a minute ago   Up About a minute       debian_container
+7996871014db   centos             "/bin/bash"              11 minutes ago       Up 11 minutes           centos_container
+```
+4. Подключаемся к centos_container и создаем файл:
+```bash
+[root@fedora containers_hw]# docker exec -it centos_container /bin/bash
+[root@7996871014db /]# cd /data
+[root@7996871014db data]# touch test_file_1.txt
+```
+5. Возвращаемся на хостовую машину и создаем файл:
+```bash
+[root@fedora containers_hw]# cd /data/
+[root@fedora data]# touch test_file_2.txt
+```
+6. Подкючаемся к debian_container и смотрим содержимое /data:
+```bash
+[root@fedora data]# docker exec -it debian_container /bin/bash
+root@5f12021e423b:/# cd /data/
+root@5f12021e423b:/data# ls
+test_file_1.txt  test_file_2.txt
+```
