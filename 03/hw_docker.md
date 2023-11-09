@@ -25,31 +25,28 @@ Hey, Netology
 Мне не удалось зарегистрироваться на https://hub.docker.com, покажу тут поэтапно:
 
 1. Скачиваем образ nginx:
-
 ```bash
 docker pull nginx
 ```
 2. Создаем Dockerfile:
-
 ```bash
 FROM nginx
 RUN echo '<html><head>Hey, Netology</head><body><h1>I am DevOps Engineer!</h1></body></html>' > /usr/share/nginx/html/index.html
 ```
+![ad](https://github.com/SemikovaTV/hw_virtualization/blob/main/03/%D0%92%D1%8B%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_010.png)
 3.Собираем образ:
-
 ```bash
 docker build -t semikova/nginx:1 .
 ```
+![ad](https://github.com/SemikovaTV/hw_virtualization/blob/main/03/%D0%92%D1%8B%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_009.png)
 4. Смотрим наши образы:
-
+![ad](https://github.com/SemikovaTV/hw_virtualization/blob/main/03/%D0%92%D1%8B%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_008.png)
 5. Запускаем контейнер:
-
 ```bash
 docker run -d -p 8080:80 semikova/nginx:1
 ```
-
 6. Проверяем:
-
+![ad](https://github.com/SemikovaTV/hw_virtualization/blob/main/03/%D0%92%D1%8B%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_007.png)
 
 
 
